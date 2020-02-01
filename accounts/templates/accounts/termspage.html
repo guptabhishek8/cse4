@@ -25,7 +25,7 @@
 
     <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">I Agree Terms & Coditions
     <br><br>
-  <button type="submit" name="submit" id="submit" onclick="location.href='{% url 'home' %}'">submit</button
+    <button type="submit" name="submit" id="submit" onclick="location.href='{% url 'home' %}'">submit</button>
     {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">Logout</a>
     {% endif %}

@@ -8,6 +8,15 @@
 <h1>Home</h1>
     Welcome {{ user.username }}
 
+<form method="post" action="/domain/">
+
+    {% csrf_token %}
+    Enter your link here:
+    <input name="domain"><br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
 {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">Logout</a>
     {% endif %}

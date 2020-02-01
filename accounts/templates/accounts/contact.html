@@ -1,60 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <style>
+
         input[type=text], select, textarea {
-  width: 100%; /* Full width */
+            box-shadow: 5px 5px 8px lightblack;
+            border:black solid 2px;
+  width: 500px; /* Full width */
   padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
+  border: none; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+  margin-top: 0px; /* Add a top margin */
+  margin-bottom: 32px; /* Bottom margin */
+  resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+            height: 60px;
+            background-color:rgba(255,245,255,1);
 
+}
+.container{
+            margin-top:100px;
+            width:600px;
+            height:700px;
+            border:none;
+            border-radius:50px;
+            background-color: white;
+            color: black;
+            text-align: left;
+            font-family: arial;
+            background-color: rgba(0,0,0,0);
+            padding-left: 50px;
+
+
+        }
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color:#0a065a;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+    box-shadow: 5px 5px 10px lightblack;
+    width: 250px;
 }
-
+::placeholder{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #a05200;
 }
 
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+    background-color: rgba(255,255,255,0.75);
+
+
   padding: 20px;
+    padding-top: 0px;
 }
     </style>
     <meta charset="UTF-8">
     <title>Contact</title>
 </head>
-<body>
+<body style="background-image:url('https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?cs=srgb&dl=pink-and-purple-wallpaper-1616403.jpg');background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;">
+
+<center>
  <div class="container">
-  <form action="action_page.php">
+      <form action="action_page.php" style="width:500px;padding-left: 50px; color: white">
+          <div style="padding-top: 100px; font-size: 50px; color: #0a065a; text-align: center; font-family: 'Montserrat', sans-serif;font-weight: 800;margin-bottom: 50px" >CONTACT US</div>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name" style="background-color: white">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" style="background-color: white">
+        <textarea id="subject" name="subject" placeholder="Write something" style="height:200px ;background-color: white"" ></textarea>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
+    <center><input type="submit" value="SUBMIT" style="width: 250px;height: 50px ;font-weight: bolder;"></center>
 
   </form>
 </div>
+</center>
+
 </body>
 </html>

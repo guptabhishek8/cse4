@@ -16,18 +16,89 @@
       }
 
   }
-</script>
+  </script>
+<style>
+  input[type=text], select, textarea {
+            box-shadow: 5px 5px 8px lightblack;
+            border:black solid 2px;
+  width: 500px; /* Full width */
+  padding: 12px; /* Some padding */
+  border: none; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0px; /* Add a top margin */
+  margin-bottom: 32px; /* Bottom margin */
+  resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+            height: 60px;
+            background-color: rgba(255,255,255,1);
+
+}
+#conta{
+            margin-top:100px;
+            width:600px;
+            height:700px;
+            border:none;
+            border-radius:50px;
+            background-color: white;
+            color: black;
+            text-align: left;
+            font-family: arial;
+            background-color: rgba(0,0,0,0);
+            padding-left: 50px;
+
+
+        }
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color:#0a065a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    box-shadow: 5px 5px 10px lightblack;
+    width: 250px;
+}
+
+
+/* Add a background color and some padding around the form */
+#conta {
+  border-radius: 5px;
+    align-self: center;
+    background-color: rgba(255,255,255,0.75);
+
+
+  padding: 20px;
+    padding-top: 0px;
+}
+</style>
     <meta charset="UTF-8">
     <title>Terms and Condition</title>
 </head>
-<body onload="disableSubmit()">
-    Welcome {{ user.username }}
+<body onload="disableSubmit()" style="background-image:url('https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?cs=srgb&dl=pink-and-purple-wallpaper-1616403.jpg');background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;">
 
+
+    <div style="color: white; font-size: 25px; font-family: 'Montserrat', sans-serif; font-weight: 900px"> Welcome {{ user.username }} </div>
+
+<center>
+    <div class="container" id="conta" style="width: 700px; height: 400px;">
+        <h1 style="color: #00267e; font-weight: 900; font-family: 'Montserrat', sans-serif; padding-top: 50px ; text-align: center">WELCOME TO S3CUR3 M3!</h1>
+        <h2 style="color: #00267e; font-family: 'Montserrat', sans-serif ; text-align: center">TERMS AND CONDITIONS</h2>
+        <p style="color: black; font-family: 'Montserrat', sans-serif ; text-align: center">By accessing S3CUR3 M3 and checking the check box we assume you accept these terms and conditions
+            i.e you have rights to test the applications you will be providing and you agree to take all of the terms
+            and conditions stated on this page.</p>
     <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">I Agree Terms & Coditions
     <br><br>
     <button type="submit" name="submit" id="submit" onclick="location.href='{% url 'home' %}'">submit</button>
+    </div>
+</center>
+
+    <span style="position: absolute; top: 0; right: 0; ">
     {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'logout' %}" style="color: white; font-size: 25px; font-family: 'Montserrat', sans-serif; font-weight: 900px ">Logout</a>
+
     {% endif %}
+    </span>
 </body>
 </html>

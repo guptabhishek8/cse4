@@ -1,33 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .button {
-          background-color: #4CAF50; /* Green */
-          border: none;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
-          -webkit-transition-duration: 0.4s; /* Safari */
-          transition-duration: 0.4s;
+      <style>
+
+        input[type=text], select, textarea {
+            box-shadow: 5px 5px 8px lightblack;
+            border:black solid 2px;
+  width: 500px; /* Full width */
+  padding: 12px; /* Some padding */
+  border: none; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0px; /* Add a top margin */
+  margin-bottom: 32px; /* Bottom margin */
+  resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+            height: 60px;
+            background-color:rgba(255,245,255,1);
+
+}
+.container{
+            margin-top:100px;
+            width:600px;
+            height:700px;
+            border:none;
+            border-radius:50px;
+            background-color: white;
+            color: black;
+            text-align: left;
+            font-family: arial;
+            background-color: rgba(0,0,0,0);
+            padding-left: 50px;
+
+
         }
-        .button2:hover {
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-                        }
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color:#0a065a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    box-shadow: 5px 5px 10px lightblack;
+    width: 250px;
+}
+::placeholder{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #a05200;
+}
+.btn{
+    width: 400px;
+    height: 100px;
+    border: none;
+    background-color: #0a065a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+    background-color: rgba(255,255,255,0.75);
+
+
+  padding: 20px;
+    padding-top: 0px;
+}
     </style>
     <meta charset="UTF-8">
     <title>Welcome</title>
 </head>
-<body>
-HELLO THERE!
+<body style="background-image:url('https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?cs=srgb&dl=pink-and-purple-wallpaper-1616403.jpg');background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;">
 
- <button type="button" class="button button2" onclick="location.href='{% url 'signin' %}'">Login</button>
- <button type="button" class="button button2" onclick="location.href='{% url 'contact' %}'">Contact Us</button>
+<center>
+ <div class="container">
+      <form action="action_page.php" style="width:500px;padding-left: 50px; color: white">
+          <div style="padding-top: 100px; font-size: 50px; color: #0a065a; text-align: center; font-family: 'Montserrat', sans-serif;font-weight: 800;margin-bottom: 50px" >HI THERE!</div>
+          <center>
+          <button type="button" class="btn" onclick="location.href='{% url 'signin' %}'" style="margin-top: 100px">LOGIN</button><br><br>
+ <button type="button" class="btn" onclick="location.href='{% url 'contact' %}'">CONTACT US</button>
+              </center>
+
+  </form>
+</div>
+</center>
 
 </body>
 </html>

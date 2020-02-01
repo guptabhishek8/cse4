@@ -7,85 +7,86 @@
 <html lang="en">
 <head>
     <style>
-        input[type=button], input[type=submit], input[type=reset]  {
-      background-color: #56baed;
-      border: none;
-      color: white;
-      padding: 15px 80px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 13px;
-      -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-      box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-      -webkit-border-radius: 5px 5px 5px 5px;
-      border-radius: 5px 5px 5px 5px;
-      margin: 5px 20px 40px 20px;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -ms-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-    }
 
-    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-      background-color: #39ace7;
-    }
+        input[type=text], select, textarea {
+            box-shadow: 5px 5px 8px lightblack;
+            border:black solid 2px;
+  width: 500px; /* Full width */
+  padding: 12px; /* Some padding */
+  border: none; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0px; /* Add a top margin */
+  margin-bottom: 32px; /* Bottom margin */
+  resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+            height: 60px;
+            background-color: rgba(255,255,255,1);
 
-    input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-      -moz-transform: scale(0.95);
-      -webkit-transform: scale(0.95);
-      -o-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-      transform: scale(0.95);
-    }
+}
+.container{
+            margin-top:100px;
+            width:600px;
+            height:700px;
+            border:none;
+            border-radius:50px;
+            background-color: white;
+            color: black;
+            text-align: left;
+            font-family: arial;
+            background-color: rgba(0,0,0,0);
+            padding-left: 50px;
 
-    input[type=text] {
-      background-color: #f6f6f6;
-      border: none;
-      color: #0d0d0d;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 5px;
-      width: 85%;
-      border: 2px solid #f6f6f6;
-      -webkit-transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      -ms-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out;
-      -webkit-border-radius: 5px 5px 5px 5px;
-      border-radius: 5px 5px 5px 5px;
-    }
 
-    input[type=text]:focus {
-      background-color: #fff;
-      border-bottom: 2px solid #5fbae9;
-    }
+        }
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color:#0a065a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    box-shadow: 5px 5px 10px lightblack;
+    width: 250px;
+}
 
-    input[type=text]:placeholder {
-      color: #cccccc;
-    }
 
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+    align-self: center;
+    background-color: rgba(255,255,255,0.75);
+
+
+  padding: 20px;
+    padding-top: 0px;
+}
     </style>
     <meta charset="UTF-8">
-    <title>Signin</title>
+    <title>login</title>
 </head>
-<body>
-<h1>Login</h1>
-<form method="POST" action="/postsignin/">
-    {% csrf_token %}
-    Username1:
-    <input name="username" class="fadeIn second"><br><br>
-    Password:
-    <input type="password" name="password" class="fadeIn third" ><br><br>
-    <input class="active" type="submit" value="SignIn">
-    <button class="active" type="button" onclick="location.href='{% url 'signup' %}'">Signup</button>
+<body style="background-image:url('https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?cs=srgb&dl=pink-and-purple-wallpaper-1616403.jpg');background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;">
 
-</form>
+<center>
+<div class="container">
+
+    <!-- Login Form -->
+    <form  method="POST" action="/postsignin/" style="width:500px;padding-left: 50px; color: white">
+        {% csrf_token %}
+        <div style="padding-top: 100px; font-size: 50px; color: #0a065a; text-align: center; font-family: 'Montserrat', sans-serif;font-weight: 800;margin-bottom: 50px" >SIGN IN</div>
+
+        <input  name="username" placeholder="username" style="width: 500px; height: 60px"><br><br>
+
+      <input type="password" name="password" placeholder="password" style="width: 500px; height: 60px"><br><br>
+
+        <input type="submit" value="SignIn" style="width: 250px;height: 50px ;font-weight: bolder;margin-left: 120px;margin-top: 50px"><br><br>
+        <button  type="button" onclick="location.href='{% url 'signup' %}'" style="width: 250px;height: 50px ;font-weight: bolder;margin-left: 120px">Signup</button>
+
+    </form>
+
+  </div>
+</div>
+</center>
 </body>
 </html>
